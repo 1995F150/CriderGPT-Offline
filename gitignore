@@ -1,0 +1,40 @@
+# ======================
+# CriderGPT-Offline .gitignore
+# ======================
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Local AI data and models
+models/
+storage/
+logs/
+data/temp/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Executables
+*.exe
+*.bat
+
+# Archive files
+*.zip
+*.rar
+*.7z
