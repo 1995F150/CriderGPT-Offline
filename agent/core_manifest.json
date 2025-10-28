@@ -1,0 +1,10 @@
+{
+  "./agent/__pycache__/agent.cpython-312.pyc": "5fe9293ddc94d4323bbc632321fa25c5bf16cfde1928c8a7f763b90f85c52d31",
+  "./agent/__pycache__/protect.cpython-312.pyc": "a06729b7448b2b25897eed1966cfbde267f2bb9de0d3928960f46779fa5c3b24",
+  "./agent/agent.py": "cc5ae124920555cbcfe42703a337b2e472a612f89b2dcd1705123c2db6ac4047",
+  "./agent/core_manifest.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+  "./agent/examples/__pycache__/verify_manifest_example.cpython-312.pyc": "7c835902fff23fb8d1821150a5b40c20935a523fa4e8fb9cb89ecfbacb0772d0",
+  "./agent/examples/verify_manifest_example.py": "ed739bb6603397505dae9d131a2c5f26650c4f079b0461afa7fa9eadc32ef6ff",
+  "./agent/keys.json": "6bd775af0df71471a2697d13dbbb80dfb7d4785aef9bb78e20f1fce7a95f16fd",
+  "./agent/protect.py": "a6ea3239289792f72e14f680820e4853261118de4c14fd296f59a565136c703c"
+}

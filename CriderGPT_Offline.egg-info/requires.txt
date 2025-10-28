@@ -1,0 +1,6 @@
+PyQt5
+Flask
+torch
+transformers
+pillow
+numpy

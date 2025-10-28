@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+CriderGPT_Offline.egg-info/PKG-INFO
+CriderGPT_Offline.egg-info/SOURCES.txt
+CriderGPT_Offline.egg-info/dependency_links.txt
+CriderGPT_Offline.egg-info/requires.txt
+CriderGPT_Offline.egg-info/top_level.txt

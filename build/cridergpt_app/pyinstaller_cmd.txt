@@ -1,0 +1,10 @@
+pyinstaller \
++--onefile \
++--noconsole \
++--name=CriderGPT_Offline_v1.0.exe \
++--add-data=www;www \
++--add-data=agent;agent \
++--add-data=offline_logs;offline_logs \
++--add-data=shadow;shadow \
++--icon=offline_ui/public/cridergpt.ico \
++/workspaces/CriderGPT-Offline/main.py

@@ -1,3 +1,38 @@
+# CriderGPT Offline
+
+Offline AI desktop app scaffold (Flask backend + React + TypeScript + Vite + Tailwind frontend).
+
+By Jessie Crider.
+
+Quick start (development):
+
+1. Create a Python virtual environment and install backend requirements:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+2. Start the Flask backend:
+
+```bash
+python main.py
+```
+
+3. In another terminal, start the frontend dev server:
+
+```bash
+cd offline_ui
+npm install
+npm run dev
+```
+
+Open http://127.0.0.1:5000 after building the frontend (`npm run build`) or open the Vite dev server directly (default 5173).
+
+Notes and assumptions:
+- Some exact uploaded component sources were not present in the prompt; I provided working React implementations consistent with your architecture.
+- To serve the frontend from Flask, run `npm run build` in `offline_ui` to produce `offline_ui/dist`, then start `python main.py`.
 # 🧠 CriderGPT Offline
 ### “Smarter Tech for Stronger Farms™”  
 **Author:** Jessie Crider (CriderGPT)  
