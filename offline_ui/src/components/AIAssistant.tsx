@@ -9,3 +9,4 @@ export default function AIAssistant({ message }: { message?: string }) {
     </div>
   );
 }
+

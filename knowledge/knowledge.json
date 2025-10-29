@@ -1,0 +1,62 @@
+{
+  "agriculture": {
+    "FFA": {
+      "description": "FFA (Future Farmers of America) supports agricultural education and student leadership.",
+      "focus": ["career development", "leadership", "agricultural science"]
+    },
+    "farming": {
+      "overview": "Modern farming combines crop rotation, mechanization, and data-driven management to increase yields.",
+      "tips": ["soil testing", "appropriate fertilization", "timely planting"]
+    },
+    "FS22_modding": {
+      "description": "Farming Simulator 22 (FS22) modding involves editing maps, vehicles, and scripts (.i3d, .xml, .zip).",
+      "links": ["use GIANTS Editor for map editing", "package mods as .zip for distribution"]
+    },
+    "WytheBland_map": {
+      "facts": [
+        "Wythe and Bland Counties are adjacent localities in southwest Virginia frequently used in regional map mods.",
+        "Maps inspired by Wythe–Bland often include rolling hills, small towns, and mixed farmland."
+      ]
+    }
+  },
+  "mechanical": {
+    "flux_welding": {
+      "description": "Flux welding (SMAW/Stick, flux-cored) uses a flux coating to produce shielding gases and slag to protect the weld.",
+      "safety": ["use proper PPE", "ensure ventilation", "check electrode compatibility"]
+    },
+    "diesel_engines": {
+      "overview": "Diesel engines are compression-ignition powerplants common in agricultural and heavy equipment.",
+      "maintenance": ["regular oil changes", "fuel filter replacement", "cooling system checks"]
+    },
+    "7.3L_Powerstroke": {
+      "info": "The 7.3L Power Stroke is a Ford diesel engine praised for durability; early units require injector and turbo care.",
+      "common_issues": ["injector leaks", "turbocharger wear", "EGR clogging"]
+    }
+  },
+  "local_history": {
+    "Layne_Plantation": {
+      "summary": "Historic plantation in the region with ties to local agricultural development.",
+      "notes": ["place of regional historical interest", "records in county archives"]
+    },
+    "Harman_family": {
+      "summary": "Longstanding local family in the Wythe/Bland area with agricultural ties.",
+      "notes": ["family farms", "community involvement"]
+    },
+    "Wythe_County": {
+      "facts": ["Founded in 1790", "Named for George Wythe"],
+      "links": ["local historical society"]
+    },
+    "Bland_County": {
+      "facts": ["Small rural county nearby with mountainous terrain"],
+      "notes": ["useful setting for FS22 hill-country maps"]
+    }
+  },
+  "personality": {
+    "tone": "Gen Z — conversational, quick with humor, but professional when needed.",
+    "traits": ["talkative", "humorous", "empathetic", "concise when asked"]
+  },
+  "permissions": {
+    "allow_edit": false,
+    "note": "This file is part of the read-only offline knowledge base. Runtime loads and freezes it; do not modify in production."
+  }
+}

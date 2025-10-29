@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavigationMenu } from "../components/navigation-menu";
 import ChatInterface, { Message } from "../components/ChatInterface";
 import AIAssistant from "../components/AIAssistant";
 import { getOfflineResponse } from "../utils/localAI";
+import { loadKnowledge } from "../system/loadKnowledge";
 
 export default function Index() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
+  const [brain, setBrain] = useState<any>(null);
 
   async function send() {
     if (!value.trim()) return;
@@ -17,7 +19,7 @@ export default function Index() {
     setValue("");
     setLoading(true);
     try {
-      const r = await getOfflineResponse(txt);
+      const r = await getOfflineResponse(txt, brain ?? undefined);
       const aiMsg: Message = { who: "ai", text: r };
       setMessages((s) => [...s, aiMsg]);
     } catch (e) {
@@ -27,6 +29,14 @@ export default function Index() {
       setLoading(false);
     }
   }
+
+  useEffect(() => {
+    // load knowledge on app start
+    (async () => {
+      const b = await loadKnowledge();
+      setBrain(b);
+    })();
+  }, []);
 
   return (
     <div className="app-shell">

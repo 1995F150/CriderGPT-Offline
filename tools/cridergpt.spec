@@ -29,6 +29,7 @@ add_data('build\\cridergpt_app\\www', 'www')
 add_data('build\\cridergpt_app\\agent', 'agent')
 add_data('build\\cridergpt_app\\offline_logs', 'offline_logs')
 add_data('build\\cridergpt_app\\shadow', 'shadow')
+add_data('knowledge', 'knowledge')
 
 icon_file = os.path.join(ROOT, 'offline_ui', 'public', 'cridergpt.ico')
 

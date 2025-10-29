@@ -2,11 +2,14 @@
   "name": "cridergpt-offline",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "main": "electron/main.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "electron .",
+    "package": "electron-builder --win --x64"
+  },
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -18,6 +21,24 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "vite": "^5.0.0",
-    "@vitejs/plugin-react": "^5.0.0"
-  }
-}
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0",
+    "concurrently": "^8.2.0",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.cridergpt.desktop",
+    "productName": "CriderGPT",
+    "win": {
+      "icon": "assets/logo.png",
+      "target": ["nsis"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    "extraResources": [
+      "../knowledge/**",
+      "../assets/**",
+      "../dist-backend/**"
+    ]

@@ -1,0 +1,40 @@
+image: Visual Studio 2022
+
+environment:
+  PYTHON: C:\Python310
+
+install:
+  - choco install -y rcedit innosetup
+  - nuget install InnoSetup -Source "https://www.nuget.org/api/v2" || true
+
+build_script:
+  - ps: |
+      Write-Host "Setting up Python and pip"
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+      pip install pyinstaller
+
+      Write-Host "Building frontend"
+      Push-Location offline_ui
+      npm ci
+      npm run build
+      Pop-Location
+
+      Write-Host "Preparing payload"
+      python tools/build_windows.py --prepare --version 1.0.0 --icon offline_ui/public/cridergpt.ico
+
+      Write-Host "Running PyInstaller"
+      pyinstaller --clean --noconfirm --onefile --windowed --name "CriderGPT_Offline" --icon "ui\assets\cridergpt.ico" main.py
+
+      Write-Host "Post-processing (rcedit)"
+      powershell -ExecutionPolicy Bypass -File .\tools\build_windows_post.ps1 -ExePath .\dist\CriderGPT_Offline.exe -VersionFile .\tools\version_metadata.json -IconPath .\offline_ui\public\cridergpt.ico
+
+      Write-Host "Attempting Inno Setup (if installed)"
+      if (Test-Path 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe') {
+        & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' ..\build_installer.iss
+      } else {
+        Write-Host "Inno Setup not found; skipping installer creation"
+      }
+
+artifacts:
+  - path: dist\**\*
